@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #f8fbf8;
+  --foreground: #1b2921;
+  --forest-primary: #1f5135;
+  --sage-accent: #70947a;
+  --coral-accent: #bd553a;
+  --surface: #ffffff;
+  --border: #e4ede5;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(221, 240, 226, 0.42), transparent 34rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #ddefe2;
+  color: #17432b;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(73, 134, 99, 0.35);
+  outline-offset: 2px;
+}
+
+.border-subtle {
+  border-color: var(--border);
+}
+
+.bg-pattern {
+  background-color: #f8fbf8;
+  background-image: radial-gradient(rgba(31, 81, 53, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
